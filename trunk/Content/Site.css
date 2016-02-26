@@ -1,0 +1,829 @@
+﻿body {
+    font-size: 62.5%;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif,"宋体";
+    color: #232323;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+/*header*/
+.baseheader {
+    height: 54px;
+    background-color: #252525;
+    -moz-min-width: 1100px;
+    -ms-min-width: 1100px;
+    -o-min-width: 1100px;
+    -webkit-min-width: 1100px;
+    min-width: 1100px;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    font-size: 1.2em;
+}
+
+.maincontent {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.products, .aboutUs, #top {
+    width: auto;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+#top {
+    padding: 0 30px;
+}
+
+#logoTitle {
+    width: 240px;
+    display: block;
+    float: left;
+}
+/*导航*/
+#navigation {
+    width: auto;
+    margin: 0;
+    margin-left: 200px;
+    display: block;
+    padding: 0;
+    vertical-align: middle;
+    float: left;
+    height: 54px;
+}
+
+    #navigation li {
+        float: left;
+        list-style: none;
+        width: 100px;
+        color: #ffffff;
+        font-size: 1.4em;
+        height: 54px;
+        line-height: 70px;
+        font-family: "微软雅黑";
+        margin-right: 65px;
+        text-align: center;
+    }
+
+        #navigation li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+            #navigation li a:hover {
+                text-decoration: none;
+                color: #c6d47a;
+            }
+
+/*wsoft*/
+#top span[class='title'] {
+    color: white;
+}
+
+span[class='title']:first-child {
+    font-size: 3.6em;
+}
+
+    span[class='title']:first-child + span[class='title'] {
+        font-size: 1.2em;
+        margin-left: 1.4px;
+    }
+
+.header {
+    height: 53px;
+    width: 100%;
+}
+
+#header {
+    height: 1px !important;
+}
+
+#header1 {
+    background-color: #061e37;
+}
+/*动画*/
+#animation {
+    width: 100%;
+    height: 427px;
+    background-color: #061e37;
+}
+
+#circle {
+    position: relative;
+    margin: auto;
+    width: 305px;
+    height: 360px;
+    top: 120px;
+    border: 0;
+}
+
+.c1 {
+    background: white;
+}
+
+.c2 {
+    background: #9a1a2c;
+}
+/*成功案例*/
+.products, .aboutUs {
+    min-height: 20px;
+    background: white;
+    padding-bottom: 26px;
+}
+/*关于我们*/
+.aboutUs {
+    background: #9a1a2c;
+}
+
+.basefo {
+    font-size: 1.2em;
+    height: 40px;
+    width: 100%;
+    background: #252525;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+h2 {
+    font-family: "微软雅黑";
+    font-size: 2.4em;
+    margin: 26px 0;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.c2 h2 {
+    color: white;
+}
+
+.text, .anlisCon {
+    padding: 0 48px;
+    line-height: 30px;
+    color: white;
+}
+/*成功案例*/
+.anlisCon {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+.anlis {
+    max-width: 1110px;
+    min-height: 20px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+    .anlis li {
+        min-height: 10px;
+        float: left;
+        list-style-type: none;
+        margin: 0 47px;
+        margin-bottom: 41px;
+        width: 264px;
+        height: 206px;
+        border: 3px solid white;
+        -ms-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+        .anlis li:hover {
+            border: 3px solid white;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+.anliImg {
+    width: 264px;
+    height: 206px;
+}
+
+.anlis img {
+    cursor: pointer;
+}
+
+.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+    float: right;
+    width: 200px;
+    margin-right: 100px;
+}
+
+.rcentext, .rcentext2 {
+    width: 100%;
+    height: 120px;
+}
+
+.rcentext {
+    margin-top: 200px;
+}
+
+.rcentext2 {
+    margin-top: 10px;
+    color: #370909;
+}
+
+.icp {
+    text-decoration: none;
+    color: #808080;
+}
+
+.more {
+    color: #555;
+    font-family: "微软雅黑";
+    text-decoration: none;
+    font-weight: normal;
+}
+
+    .more:hover {
+        color: #000;
+        text-decoration: underline;
+    }
+
+#main-content {
+    width: 100%;
+    min-height: 1px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #2C3E50;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important;
+}
+
+    #main-content li {
+        list-style: none;
+        float: left;
+    }
+
+    #main-content a {
+        text-decoration: none;
+    }
+
+        #main-content a:hover {
+            text-decoration: underline;
+        }
+
+.colorlist {
+    max-width: 840px;
+    height: 30px;
+    margin: 15px auto;
+    padding: 0 20px;
+    background-color: #EEE;
+    text-align: left;
+}
+
+.onecolor {
+    width: 60px;
+    height: 20px;
+    float: left;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.uilist {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 347px;
+}
+
+    .uilist .clearleft {
+        clear: left;
+    }
+
+    .uilist .oneui {
+        width: 380px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+
+    .uilist .uiimg {
+        width: 380px;
+        height: 200px;
+        float: left;
+        border: solid 1px #EEE;
+    }
+
+.uiimg img {
+    border: none;
+}
+
+.uilist .uiinfo {
+    width: 380px;
+    height: 16px;
+    line-height: 16px;
+    float: left;
+    margin-top: 10px;
+    color: #999;
+}
+
+    .uilist .uiinfo .cate {
+        float: left;
+    }
+
+    .uilist .uiinfo .appname {
+        float: right;
+    }
+
+    .uilist .uiinfo a {
+        color: #999;
+    }
+
+#newmore, #newmoreicon {
+    width: 100%;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px auto;
+    background-color: #EEE;
+}
+
+#gototop {
+    width: 50px;
+    padding: 5px 0;
+    background-color: #58595B;
+    color: #FFF;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+}
+
+    #gototop a {
+        display: block;
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+
+
+/*产品详细页面*/
+.main_article {
+    background-color: #f9f9f9;
+    padding: 40px 47px 20px 47px;
+    color: #333333;
+    font: 14px Arail 宋体;
+}
+
+
+
+.article_title {
+    margin: 0px 0px 30px 0px;
+    border-bottom: 1px dashed #dadde3;
+    position: relative;
+    color: #333;
+}
+
+    .article_title h1 {
+        height: 24px;
+        line-height: 24px;
+        overflow: hidden;
+        font-size: 22px;
+        font-family: "微软雅黑","黑体";
+        font-weight: normal;
+        text-align: center;
+        margin: 0px;
+    }
+
+
+    .article_title p {
+        text-align: center;
+        font-size: 12px;
+        color: #777777;
+        margin: 25px 0px 15px 0px;
+    }
+
+    .article_title span {
+        position: absolute;
+        right: 0px;
+        bottom: 10px;
+        cursor: pointer;
+    }
+
+.normal_size {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    background: url("../Files/bg2.png") scroll no-repeat 0px 0px;
+}
+
+.big_size {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    background: url("../Files/bg2.png") scroll no-repeat 0px -102px;
+}
+
+.article_title a {
+    color: #777777;
+    text-decoration: none;
+}
+
+.article_content {
+    line-height: 30px;
+    min-height: 500px;
+}
+
+    .article_content p {
+        text-indent: 0px;
+    }
+
+.f_center {
+    text-align: center;
+    text-indent: 0px !important;
+}
+
+.backto_homepage {
+    text-align: center;
+}
+
+.big_font {
+    font-size: 18px;
+}
+
+
+.onemenu {
+    position: relative;
+}
+
+.ermenu {
+    position: absolute;
+    display: block;
+    top: 54px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    background: #252525;
+    display: none;
+}
+
+    .ermenu li {
+        margin: 0 0 0 10px !important;
+        padding: 0 !important;
+        font-size: 14px !important;
+        height: 35px !important;
+        line-height: 35px !important;
+        width: 80px !important;
+        border-bottom: 1px solid #343338;
+        text-align: center;
+    }
+
+        .ermenu li a:hover {
+            color: #c6d47a;
+        }
+
+.sectionText label {
+    display: block;
+}
+
+.section {
+    width: 100%;
+    height: 800px;
+    display: block;
+}
+
+.section1 {
+    background: url('http://www.vfreesoft.com:82/AnyCode/p-index.jpg') center 56px no-repeat;
+    background-color: #cdcdcd;
+}
+
+    .section1 .sectionText {
+        display: inline-block;
+        width: 100%;
+        margin-top: 545px;
+        text-align: center;
+    }
+
+        .section1 .sectionText label {
+            -webkit-text-shadow: 0px 1px 0 white;
+            text-shadow: 0px 1px 0 white;
+        }
+
+        .section1 .sectionText .sectionTitle {
+            font-family: "宋体";
+            font-size: 55px;
+            color: #5a5a5a;
+        }
+
+        .section1 .sectionText .sectionEn {
+            font-family: "Bell MT";
+            font-size: 34px;
+            color: #5a5a5a;
+            margin-top: 32px;
+        }
+
+        .section1 .sectionText .sectionRemark {
+            font-family: "宋体";
+            font-size: 23px;
+            color: #383838;
+            margin-top: 40px;
+        }
+
+            .section1 .sectionText .sectionRemark sup {
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                margin-left: -12px;
+                margin-right: 5px;
+            }
+
+.section2 {
+    background: url('http://www.vfreesoft.com:82/AnyCode/p-color.jpg') 54px 107px no-repeat;
+    background-color: #1f2024;
+}
+
+    .section2 .sectionText {
+        display: inline-block;
+        width: 389px;
+        height: 231px;
+        text-align: left;
+        float: right;
+        margin-right: 121px;
+        margin-top: 275px;
+    }
+
+        .section2 .sectionText label {
+            -webkit-text-shadow: 0px 1px 0 #0d0408;
+            text-shadow: 0px 1px 0 #0d0408;
+        }
+
+        .section2 .sectionText .sectionTitle {
+            font-family: "宋体";
+            font-size: 55px;
+            color: #cccccd;
+        }
+
+        .section2 .sectionText .sectionEn {
+            font-family: "Bell MT";
+            font-size: 34px;
+            color: #555a64;
+            margin-top: 32px;
+        }
+
+        .section2 .sectionText .sectionRemark {
+            font-family: "宋体";
+            font-size: 23px;
+            color: #686b72;
+            margin-top: 40px;
+        }
+
+            .section2 .sectionText .sectionRemark sup {
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                margin-left: -12px;
+                margin-right: 5px;
+            }
+@media only screen and (max-width: 1440px) {
+    .section1 .sectionText .sectionTitle {
+        font-family: "宋体";
+        font-size: 55px;
+        color: #5a5a5a;
+    }
+
+    .section1 .sectionText .sectionEn {
+        font-family: "Bell MT";
+        font-size: 34px;
+        color: #5a5a5a;
+        margin-top: 32px;
+    }
+
+    .section1 .sectionText .sectionRemark {
+        font-family: "宋体";
+        font-size: 23px;
+        color: #383838;
+        margin-top: 40px;
+    }
+
+
+
+    .section2 .sectionText {
+        display: inline-block;
+        width: 389px;
+        height: 231px;
+        text-align: left;
+        float: right;
+        margin-right: 50px;
+        margin-top: 275px;
+    }
+
+        .section2 .sectionText .sectionTitle {
+            font-family: "宋体";
+            font-size: 55px;
+            color: #cccccd;
+        }
+
+        .section2 .sectionText .sectionEn {
+            font-family: "Bell MT";
+            font-size: 34px;
+            color: #555a64;
+            margin-top: 32px;
+        }
+
+        .section2 .sectionText .sectionRemark {
+            font-family: "宋体";
+            font-size: 23px;
+            color: #686b72;
+            margin-top: 40px;
+        }
+}
+
+@media only screen and (max-width: 1366px) {
+    .section1 .sectionText .sectionTitle {
+        font-family: "宋体";
+        font-size: 50px;
+        color: #5a5a5a;
+    }
+
+    .section1 .sectionText .sectionEn {
+        font-family: "Bell MT";
+        font-size: 30px;
+        color: #5a5a5a;
+        margin-top: 32px;
+    }
+
+    .section1 .sectionText .sectionRemark {
+        font-family: "宋体";
+        font-size: 20px;
+        color: #383838;
+        margin-top: 40px;
+    }
+    .section1 .sectionText .sectionRemark sup {
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                margin-left: -6px;
+                margin-right: 5px;
+            }
+
+
+    .section2 .sectionText {
+        display: inline-block;
+        width: 389px;
+        height: 231px;
+        text-align: left;
+        float: right;
+        margin-right: 24px;
+        margin-top: 275px;
+    }
+
+        .section2 .sectionText .sectionTitle {
+            font-family: "宋体";
+            font-size: 50px;
+            color: #cccccd;
+        }
+
+        .section2 .sectionText .sectionEn {
+            font-family: "Bell MT";
+            font-size: 30px;
+            color: #555a64;
+            margin-top: 32px;
+        }
+
+        .section2 .sectionText .sectionRemark {
+            font-family: "宋体";
+            font-size: 20px;
+            color: #686b72;
+            margin-top: 40px;
+        }
+}
+
+@media only screen and (max-width: 1280px) {
+    .section1 .sectionText .sectionTitle {
+        font-family: "宋体";
+        font-size: 45px;
+        color: #5a5a5a;
+    }
+
+    .section1 .sectionText .sectionEn {
+        font-family: "Bell MT";
+        font-size: 24px;
+        color: #5a5a5a;
+        margin-top: 32px;
+    }
+
+    .section1 .sectionText .sectionRemark {
+        font-family: "宋体";
+        font-size: 13px;
+        color: #383838;
+        margin-top: 14px;
+    }
+     .section1 .sectionText .sectionRemark sup {
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                margin-left: -3px;
+                margin-right: 5px;
+            }
+
+
+    .section2 .sectionText {
+        display: inline-block;
+        width: 333px;
+        height: 231px;
+        text-align: left;
+        float: right;
+        margin-right: 0px;
+        margin-top: 275px;
+    }
+
+        .section2 .sectionText .sectionTitle {
+            font-family: "宋体";
+            font-size: 45px;
+            color: #cccccd;
+        }
+
+        .section2 .sectionText .sectionEn {
+            font-family: "Bell MT";
+            font-size: 24px;
+            color: #555a64;
+            margin-top: 32px;
+        }
+
+        .section2 .sectionText .sectionRemark {
+            font-family: "宋体";
+            font-size: 14px;
+            color: #686b72;
+            margin-top: 40px;
+        }
+}

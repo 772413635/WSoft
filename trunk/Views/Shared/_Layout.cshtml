@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="shortcut icon" href="~/Files/WSoft.ico" type="images/x-icon">
+        <title>@ViewBag.Title</title>
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <script src="~/Scripts/jquery/jquery-1.9.1.min.js"></script>
+        <script src="~/Scripts/Views/Base.js"></script>
+        @RenderSection("scripts", required: false)
+    </head>
+
+
+<body>
+    <div id="header" class="header"></div>
+    <div class="baseheader" style="position: fixed;top: 0;z-index: 999">
+        <div id="top">
+            <div id="logoTitle">
+                @*<span class="title">
+                    </span>*@
+                <img src="~/Files/logo.png" />
+                <span class="title" style="position: relative;top:-10px;font-size:12px">苏州竹文软件工作室</span>
+            </div>
+            <ul id="navigation">
+                <li class="onemenu"><a id="index" href="javascript:;" onclick="goHome()">首页</a></li>
+
+                <li class="onemenu">
+                    <a id="al" href="javascript:;" onclick="goAl()">成功案例</a>
+                </li>
+                <li class="onemenu">
+                    <a id="fw" href="javascript:;" style="cursor:default">产品</a>
+                    <ul class="ermenu">
+                        <li><a href="@Url.Content("~/Product/Index")">AnyCode</a></li>
+                    </ul>
+                </li>
+                <li class="onemenu"><a id="gw" href="javascript:;" onclick="goGw()">关于我们</a></li>
+            </ul>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+
+    @RenderBody()
+    <div class="basefo">
+        @Html.Action("PartialFooter", "Partial")
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+﻿@model WSoft.Models.ws_Products
+@using WSoft.Controllers
+@using WSoft.Models
+@{
+    ViewBag.Title = "苏州竹文软件工作室";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+@section scripts{
+
+    <script src="~/Scripts/jquery/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 600) {
+                    $('#gototop').show();
+                } else {
+                    $('#gototop').hide();
+                }
+            });
+            $(".big_size").click(function () {
+                $(".article_content").addClass("big_font");
+                $(this).css("background-position", "0px -68px");
+                $(".normal_size").css("background-position", "0px -32px");
+                setCookie("fontsize", "big", 30);
+            });
+            $(".normal_size").click(function () {
+                $(".article_content").removeClass("big_font");
+                $(this).css("background-position", "0px 0px");
+                $(".big_size").css("background-position", "0px -102px");
+                setCookie("fontsize", "small", 30);
+            });
+            var fontsize = getCookie("fontsize", "small");
+            if (fontsize == "big") {
+                $(".big_size").trigger("click");
+            }
+
+        });
+        function toTop() {
+            $.scrollTo("#header", 500);
+            return false;
+        }
+        function setCookie(name, value, days) {
+            var exp = new Date();
+            exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
+            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+        }
+
+        function getCookie(name, value) {
+            var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+            if (arr != null) return unescape(arr[2]); return value;
+        }
+
+
+    </script>
+}
+<div id="header1" class="header"></div>
+<div class="main_article">
+    <div class="article_title">
+        <h1>@Html.TextValueFor(c => c.Name)</h1>
+        <p>竹文工作室</p>
+        <span>
+            <a class="normal_size"></a>
+            <a class="big_size"></a>
+        </span>
+    </div>
+    <div class="article_content">
+        <div>
+
+            <p class="f_center">
+                @{
+                    var model = (ws_Products)(ViewData.Model);
+
+                    if (!string.IsNullOrWhiteSpace(model.FirstImg))
+                    {
+                        var src = model.FirstImg;
+                        <img src="@src" />
+                    }
+                }
+
+            </p>
+            <div style="padding: 0 100px">@Html.PValueFor(c => c.Remark)</div>
+            @{
+                if (model.ContentImgList.Count > 0)
+                {
+                    foreach (var img in model.ContentImgList)
+                    {
+                        <p class="f_center"><img src='@img'></p>
+                    }
+                }
+            }
+        </div>
+    </div>
+    <div id="gototop">
+        <a href="javascript:;" onclick="toTop()" title="回到顶部">Top</a>
+    </div>
+</div>

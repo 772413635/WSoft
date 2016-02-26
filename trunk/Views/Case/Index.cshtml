@@ -1,0 +1,121 @@
+﻿@using WSoft.Models
+@{
+    ViewBag.Title = "苏州竹文软件工作室";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+
+    <script src="~/Scripts/jquery/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript">
+        var param = new QueryObject();
+        param.Page = 1;
+        param.Rp = 6;
+        param.WhereStr = " where IsDelete=1";
+        $(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 600) {
+                    $('#gototop').show();
+                } else {
+                    $('#gototop').hide();
+                }
+            });
+            loadPro();
+        });
+
+
+        //回到顶部
+
+        function toTop() {
+            $.scrollTo("#header", 500);
+            return false;
+        }
+
+        //加载案例
+
+        function loadPro() {
+            $.ajax({
+                url: "/Case/ProList",
+                type: 'post',
+                data: param,
+                dataType: "json",
+                beforeSend: function () {
+                    $("#newmore img").show();
+                    $("#newmore span").text("正在加载中");
+                    
+                },
+                success: function(data) {
+
+                    var lis = "";
+                    $(data.proList).each(function(i, n) {
+                        if ((++i + (param.Page - 1) * param.Rp) % 3 == 1) {
+                            lis += '<li class="oneui clearleft">' +
+                                '<div class="uiimg">' +
+                                '<a href="/Case/ShowProducts/' + n.Code + '" title="' + n.Name + '" target="_blank">' +
+                                '<img onerror="showError(this)" src="/GiveMePhoto/' + n.Code + '/1" alt="' + n.Name + '" />' +
+                                '</a>' +
+                                '</div>' +
+                                '<div class="uiinfo">' +
+                                '<span class="cate">' +
+                                '<a href="/Case/ShowProducts/' + n.Code + '" title="' + n.Name + '" target="_blank">' + n.Name + '</a>' +
+                                '</span>' +
+                                '<span class="appname">' +
+                                '<a href="' + FormatterNull(n.Url) + '" target="_blank" title="' + FormatterNull(n.Url) + '">' + FormatterNull(n.Url) + '</a>' +
+                                '</span>' +
+                                '</div>' +
+                                '</li>';
+                        } else {
+                            lis += '<li class="oneui">' +
+                                '<div class="uiimg">' +
+                                '<a href="/Case/ShowProducts/' + n.Code + '" title="' + n.Name + '" target="_blank">' +
+                                '<img onerror="showError(this)" src="/GiveMePhoto/' + n.Code + '/1" alt="' + n.Name + '" />' +
+                                '</a>' +
+                                '</div>' +
+                                '<div class="uiinfo">' +
+                                '<span class="cate">' +
+                                '<a href="/Case/ShowProducts/' + n.Code + '" title="' + n.Name + '" target="_blank">' + n.Name + '</a>' +
+                                '</span>' +
+                                '<span class="appname">' +
+                                '<a href="' + FormatterNull(n.Url) + '" target="_blank" title="' + FormatterNull(n.Url) + '">' + FormatterNull(n.Url) + '</a>' +
+                                '</span>' +
+                                '</div>' +
+                                '</li>';
+                        }
+                        if (param.Page * param.Rp >= data.total) {
+                            $("#newmore span").text("没有了:(");
+                            $("#newmore img").hide();
+                            $("#newmore").removeAttr("onclick");
+                        } else {
+                            $("#newmore span").text("更多");
+                            $("#newmore img").hide();
+                        }
+                    });
+
+                    $("#newmore").before(lis);
+                }
+            });
+        }
+
+
+        //加载更多
+
+        function loadMore() {
+            param.Page++;
+            loadPro();
+        }
+    </script>
+}
+<div id="header1" class="header"></div>
+<div id="main-content">
+    <div style="height: 30px"></div>
+    <ul class="uilist">
+        
+        <li id="newmore" onclick="loadMore()">
+           
+            <span>更多</span><img style="display: none" src="~/Files/progerssbar_editnplace.gif" />
+        </li>
+        <div style="clear: both"></div>
+    </ul>
+    <div id="gototop">
+        <a href="javascript:;" onclick="toTop()" title="回到顶部">Top</a>
+    </div>
+</div>
